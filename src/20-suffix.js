@@ -1,0 +1,1 @@
+VK.URL = VK.parseURL();
