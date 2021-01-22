@@ -1,5 +1,3 @@
-
-// waitUntilTrue
 VK.waitUntilTrue = function (func, callback) {
     (function () {
         if (true === func()) {
@@ -10,7 +8,6 @@ VK.waitUntilTrue = function (func, callback) {
     })();
 };
 
-// waitUntilExists
 VK.waitUntilExists = function (selectors, callback, length, timeout) {
     if (length === undefined) {
         length = ">0";
@@ -21,7 +18,7 @@ VK.waitUntilExists = function (selectors, callback, length, timeout) {
         timeout = 2000;
     }
 
-    var time = new Date().getTime();
+    let time = new Date().getTime();
     (function () {
         if (true === eval($(selectors).length + length)) {
             callback.apply($(selectors).get(), [selectors]);
@@ -33,14 +30,13 @@ VK.waitUntilExists = function (selectors, callback, length, timeout) {
     })();
 };
 
-// waitUntilMore
 VK.waitUntilMore = function (selectors, callback, interval) {
     let operationUuid = "TM_" + VK.uuidv1();
     interval = interval || 50;
 
     console.log(selectors, operationUuid, interval);
     (function () {
-        var $new_elements = $(selectors).not(`.${operationUuid}`);
+        let $new_elements = $(selectors).not(`.${operationUuid}`);
         $new_elements.addClass(operationUuid);
         $new_elements.each(function (index) {
             callback.apply(this, [selectors, this]);

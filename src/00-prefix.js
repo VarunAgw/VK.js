@@ -1,1 +1,2 @@
 VK = {};
+VK.DEBUG = false;

@@ -1,8 +1,6 @@
 /**
  * A fancier way to parse JS keydown events
  * Author: Varun Agrawal <Varun@VarunAgw.com>
- * Version: 1.3
- * Last Updated: 23-July-2016
  *
  * @param {object}             event:             Just forward the event
  * @param {array|number}       possibleKeyCodes:  Use single keycode or an array of codes to match either of them
