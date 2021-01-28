@@ -10,6 +10,8 @@ VK.parseURL = function (url) {
         } else {
             url = document.location.href;
         }
+    } else if (typeof url === "object") {
+        url = url.href;
     }
 
     let originalUrl = url;

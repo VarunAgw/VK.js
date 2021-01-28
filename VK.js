@@ -1,7 +1,7 @@
 // ********************************************************************************
 // *
 // * VK.js by Varun Agrawal (https://Varunagw.com/)
-// * Version: v2021.1.22
+// * Version: v2021.1.28
 // *
 // *********************************************************************************
 
@@ -621,6 +621,8 @@ VK.parseURL = function (url) {
         } else {
             url = document.location.href;
         }
+    } else if (typeof url === "object") {
+        url = url.href;
     }
 
     let originalUrl = url;
